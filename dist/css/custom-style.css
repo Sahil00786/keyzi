@@ -1,0 +1,182 @@
+/* gloabal box shadow */
+.box-shadow{
+  box-shadow: rgba(17, 17, 26, 0.1) 0px 0px 16px;
+}
+
+/* login page style start */
+.login-page-body {
+  background-color: #f1f5f9;
+}
+.login-box-header {
+  color: #0ea5e9;
+  font-size: 36px;
+  font-weight: 300;
+  padding: 20px 40px 0;
+  position: relative;
+}
+.login-box-header:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  background: #d9d9d9;
+  z-index: 2;
+  left: 0;
+  bottom: -10px;
+}
+.login-form-body {
+  padding: 20px 40px 40px;
+}
+.custom-login-box {
+  width: 448px;
+}
+.custom-card-body {
+  padding: 0;
+}
+.custom-card-body .form-control {
+  border: 1px solid #bdcad5 !important;
+  width: 100%;
+  border-radius: 5px !important;
+  height: 60px;
+  color: #bec2c6 !important;
+  font-weight: 300;
+}
+.custom-card-body .form-control:focus {
+  border-color: #0ea5e9 !important;
+}
+.custom-card-body .custom-label {
+  font-weight: 400 !important;
+  font-size: 16px;
+}
+.login-btn {
+  background-color: #0ea5e9;
+}
+.login-btn:hover {
+  background-color: #0894d4;
+  border-color: #0894d4;
+}
+.custom-link a {
+  color: #2c3e50 !important;
+  font-size: 16px;
+}
+.custom-link a:hover {
+  color: #0ea5e9 !important;
+}
+/* login page style end */
+
+/* manage-agency page style start */
+.logo-light {
+  padding: 0.8125rem 1.25rem;
+}
+.header-link p,
+.header-link i {
+  font-size: 22px;
+  color: #0ea5e9;
+  padding: 0;
+}
+.notification-icon {
+  font-size: 30px;
+  padding: 0;
+}
+.notification-icon i {
+  color: #2c3e50;
+}
+.notification-icon .navbar-badge {
+  width: 12px;
+  height: 12px;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  right: 13px;
+  top: 7px;
+}
+.profile-link .dropdown-menu{
+max-width: 150px;
+min-width: 150px;
+padding: 0;
+border-radius: 5px;
+border: none;
+}
+.profile-link p{
+    font-size: 16px;
+    color: #000;
+}
+.profile-link .dropdown-menu .dropdown-item{
+    font-size: 14px;
+    font-weight: 500;
+}
+.profile-link .fa-user-alt{
+    background-color: #0ea5e9;
+    color: #fff;
+    border-radius: 50%;
+    font-size: 16px;
+    padding: 10px;
+}
+.sidenav-heading{
+    font-size: 16px !important;
+    font-weight: 600;
+    color: #fff !important;
+}
+.sidenav-subheading{
+    font-size: 14px !important;
+    font-weight: 500;
+    color: #ffffff80 !important; 
+}
+.sidenav .nav-link{
+    padding: .5rem .75rem;
+    color: #fff !important;
+    font-weight: 300;
+}
+.sidenav-menu::after{
+    content: '';
+    width: 90%;
+    border-bottom: 1px solid #bec2c61a;
+    position: absolute;
+    right: -8px;
+    bottom: 0;
+}
+.side-nav{
+  background-color: #282C31 !important;
+}
+.content-title{
+  color: #2C3E50;
+  font-size: 32px !important;
+}
+.breadcrumb-list a{
+  color: #2C3E50 !important;
+  font-size: 16px !important;
+  font-weight: 400;
+}
+.page-content{
+  background-color: #F1F5F9 !important;
+}
+.page-content .content{
+  background-color: #fff !important;
+  border-radius: 5px;
+}
+.profile-box{
+  background-color: #f1f5f9;
+  box-shadow: none;
+  margin: 0 !important;
+}
+.profile-box .info-box-icon{
+  height: 70px;
+}
+.profile-box .info-box-number{
+  font-size: 40px;
+  line-height: 1;
+}
+.profile-box .progress-description{
+  color: #2c3e50;
+  font-size: 18px;
+}
+.page-content .card-title{
+  color: #2C3E50;
+  font-size: 20px;
+  font-weight: bold;
+}
+.page-content .card{
+  background-color: #f1f5f9;
+  box-shadow: none;
+  padding: 10px 20px;
+}
+/* manage-agency page style start */
