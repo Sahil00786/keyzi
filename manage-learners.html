@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Keyzi</title>
+
+  <!-- Google Font: Source Sans Pro -->
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="plugins/fontawesome-free/css/all.min.css">
+  <!-- IonIcons -->
+  <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+  <!-- Theme style -->
+  <link rel="stylesheet" href="dist/css/adminlte.min.css">
+  <!-- Theme style -->
+  <link rel="stylesheet" href="dist/css/custom-style.css">
+</head>
+<!--
+`body` tag options:
+
+  Apply one or more of the following classes to to the body tag
+  to get the desired effect
+
+  * sidebar-collapse
+  * sidebar-mini
+-->
+
+<body class="hold-transition sidebar-mini">
+  <div class="wrapper">
+    <!-- Navbar -->
+    <nav class="main-header navbar navbar-expand navbar-white navbar-light">
+      <!-- Left navbar links -->
+
+
+      <!-- Right navbar links -->
+      <ul class="navbar-nav ml-auto align-items-center">
+        <!-- Navbar Search -->
+        <!-- <li class="nav-item">
+          <a class="nav-link d-flex align-items-center header-link" href="#" role="button">
+            <i class='fas fa-wallet'></i>
+            <p class="my-0 mx-3">$2,257.00</p>
+          </a>
+        </li> -->
+        <!-- Notifications Dropdown Menu -->
+        <li class="nav-item dropdown">
+          <a class="nav-link notification-icon" data-toggle="dropdown" href="#">
+            <i class="far fa-bell"></i>
+            <span class="badge-danger navbar-badge"></span>
+          </a>
+          <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
+            <span class="dropdown-item dropdown-header">15 Notifications</span>
+            <div class="dropdown-divider"></div>
+            <a href="#" class="dropdown-item">
+              <i class="fas fa-envelope mr-2"></i> 4 new messages
+              <span class="float-right text-muted text-sm">3 mins</span>
+            </a>
+            <div class="dropdown-divider"></div>
+            <a href="#" class="dropdown-item">
+              <i class="fas fa-users mr-2"></i> 8 friend requests
+              <span class="float-right text-muted text-sm">12 hours</span>
+            </a>
+            <div class="dropdown-divider"></div>
+            <a href="#" class="dropdown-item">
+              <i class="fas fa-file mr-2"></i> 3 new reports
+              <span class="float-right text-muted text-sm">2 days</span>
+            </a>
+            <div class="dropdown-divider"></div>
+            <a href="#" class="dropdown-item dropdown-footer">See All Notifications</a>
+          </div>
+        </li>
+        <li class="nav-item dropdown profile-link px-3 d-flex align-items-center">
+          <span class="py-0 d-flex align-items-center ">
+            <i class="fas fa-user-alt"></i>
+            <p class="my-0 mx-2">Agency</p>
+          </span>
+          <a class="nav-link py-0 px-0 d-flex align-items-center" data-toggle="dropdown" href="#">
+            <i class="fas fa-chevron-down"></i>
+          </a>
+          <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
+            <a href="#" class="dropdown-item">
+              Profile Settings
+            </a>
+            <a href="#" class="dropdown-item">
+              Change Password
+            </a>
+            <a href="#" class="dropdown-item">
+              Log Out
+            </a>
+          </div>
+        </li>
+      </ul>
+    </nav>
+    <!-- /.navbar -->
+
+    <!-- Main Sidebar Container -->
+    <aside class="main-sidebar sidebar-dark-primary side-nav">
+      <!-- Brand Logo -->
+      <a href="index3.html" class="brand-link logo-light">
+        <img src="dist/img/images/light-logo.png" alt="Keyzi" class="" style="opacity: .8">
+      </a>
+
+      <!-- Sidebar -->
+      <div class="sidebar sidenav">
+        <!-- Sidebar Menu -->
+        <nav class="mt-2">
+          <ul class="nav nav-pills nav-sidebar flex-column sidenav-menu position-relative py-4">
+            <li class="nav-header sidenav-heading">Agency Dashboard</li>
+            <li class="nav-header sidenav-subheading">Microsites </li>
+
+            <li class="nav-item">
+              <a href="manage-case-provider.html" class="nav-link">
+                Manage Case Providers
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="manage-accountant.html" class="nav-link">
+                Manage Accountants
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="manage-learners.html" class="nav-link">
+                Manage Learners
+              </a>
+            </li>
+          </ul>
+          <ul class="nav nav-pills nav-sidebar flex-column  py-4">
+            <li class="nav-header sidenav-subheading">Overall</li>
+
+            <li class="nav-item">
+              <a href="#" class="nav-link">
+                Landing Page
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link">
+                Booking
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link">
+                Wallet Transaction
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link">
+                Transaction history
+              </a>
+            </li>
+          </ul>
+        </nav>
+        <!-- /.sidebar-menu -->
+      </div>
+      <!-- /.sidebar -->
+    </aside>
+
+    <!-- Content Wrapper. Contains page content -->
+    <div class="content-wrapper page-content px-4">
+      <!-- Content Header (Page header) -->
+      <div class="content-header content-title">
+        <div class="container-fluid">
+          <div class="row mb-2">
+            <div class="col-sm-12 px-0">
+              <h1 class="m-0">Manage Agency</h1>
+            </div><!-- /.col -->
+            <div class="col-sm-12 px-0">
+              <ol class="breadcrumb">
+                <li class="breadcrumb-item breadcrumb-list"><a href="#">Admin</a></li>
+                <li class="breadcrumb-item breadcrumb-list"><a href="#">Manage Agency</a></li>
+                <li class="breadcrumb-item breadcrumb-list"><a href="#">Manage Learners</a></li>
+              </ol>
+            </div><!-- /.col -->
+          </div><!-- /.row -->
+        </div><!-- /.container-fluid -->
+      </div>
+      <!-- /.content-header -->
+
+      <!-- Main content -->
+      <div class="content px-0 py-4 box-shadow mx-2">
+        <div class="container-fluid">
+          <!-- /.col-md-6 -->
+        </div>
+        <!-- /.row -->
+      </div>
+      <!-- /.container-fluid -->
+    </div>
+    <!-- /.content -->
+  </div>
+  <!-- /.content-wrapper -->
+
+  </div>
+  <!-- ./wrapper -->
+
+  <!-- REQUIRED SCRIPTS -->
+
+  <!-- jQuery -->
+  <script src="plugins/jquery/jquery.min.js"></script>
+  <!-- Bootstrap -->
+  <script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <!-- AdminLTE -->
+  <script src="dist/js/adminlte.js"></script>
+
+  <!-- OPTIONAL SCRIPTS -->
+  <script src="plugins/chart.js/Chart.min.js"></script>
+  <!-- AdminLTE for demo purposes -->
+  <script src="dist/js/demo.js"></script>
+  <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
+  <script src="dist/js/pages/dashboard3.js"></script>
+</body>
+
+</html>

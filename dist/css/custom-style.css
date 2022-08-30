@@ -1,7 +1,15 @@
 /* gloabal box shadow */
+body{
+  font-family: 'Nunito';
+}
+
 .box-shadow{
   box-shadow: rgba(17, 17, 26, 0.1) 0px 0px 16px;
 }
+.justify-content-evenly{
+  justify-content: space-evenly;
+}
+
 
 /* login page style start */
 .login-page-body {
@@ -164,9 +172,10 @@ border: none;
 .profile-box .info-box-number{
   font-size: 40px;
   line-height: 1;
+  color: #000;
 }
 .profile-box .progress-description{
-  color: #2c3e50;
+  color: #2c3e50 !important;
   font-size: 18px;
 }
 .page-content .card-title{
@@ -184,5 +193,84 @@ border: none;
   padding-top: 6px;
   font-size: 20px;
   color: #2C3E50 !important;
+}
+.side-nav .logo-light{
+  padding: 0.75rem 1.25rem;
+}
+.custom-table thead th{
+  border: none !important;
+  font-size: 16px;
+  font-weight: bold;
+  color: #2C3E50;
+}
+.custom-table thead{
+  background-color: #F4F7FA;
+}
+.custom-table td{
+  border: none;
+}
+.custom-table tbody tr{
+  position: relative;
+
+}
+.custom-table tbody tr::after{
+  content: "";
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  border-bottom: 1px solid #DDE1E6;
+}
+.custom-table td, .custom-table th {
+  padding: 20px;
+  padding-left: 1.4rem;
+  padding-right: 0;
+}
+.custom-table tbody td{
+  font-size: 16px;
+  color: #2C3E50;
+  font-weight: normal;
+}
+.search-bar{
+  background-color: #F4F7FA;
+  border-radius: 20px;
+  padding: 5px 10px;
+}
+.search-bar input{
+  border: none;
+  background-color: #F4F7FA;
+  font-size: 14px;
+  color: #2C3E50;
+  width: 150px;
+}
+.search-bar input:focus{
+  outline: none;
+}
+.search-bar i, .table-filter i{
+  transform: scaleX(-1);
+  font-size: 14px;
+  color: #2C3E50;
+}
+.table-filter{
+  background-color: #F4F7FA;
+  border-radius: 5px;
+  padding: 5px 10px;
+}
+.custom-table i{
+  color: #BDCAD5;
+  font-size: 21px;
+}
+
+.custom-table tbody td:last-child{
+display: flex;
+align-items: center;
+justify-content: space-evenly;
+width: 100%;
+max-width: 235px;
+margin: 0 0 0 auto;
+padding-right: 0.7rem;
+}
+.showMorebtn  a{
+  padding-right: 1.4rem;
 }
 /* manage-agency page style start */

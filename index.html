@@ -5,13 +5,18 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Keyzi</title>
-
+   <!-- font family -->
+   <link href='https://fonts.googleapis.com/css?family=Nunito' rel='stylesheet'>
   <!-- Google Font: Source Sans Pro -->
   <link rel="stylesheet"
     href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
   <!-- Font Awesome Icons -->
   <link rel="stylesheet" href="plugins/fontawesome-free/css/all.min.css">
   <!-- IonIcons -->
+  <link rel="stylesheet" href="plugins/datatables-bs4/css/dataTables.bootstrap4.min.css">
+  <link rel="stylesheet" href="plugins/datatables-responsive/css/responsive.bootstrap4.min.css">
+  <link rel="stylesheet" href="plugins/datatables-buttons/css/buttons.bootstrap4.min.css">
+  <!-- DataTables -->
   <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
   <!-- Theme style -->
   <link rel="stylesheet" href="dist/css/adminlte.min.css">
@@ -26,7 +31,8 @@
 
   * sidebar-collapse
   * sidebar-mini
--->                                   
+-->
+
 <body class="hold-transition sidebar-mini">
   <div class="wrapper">
     <!-- Navbar -->
@@ -37,12 +43,12 @@
       <!-- Right navbar links -->
       <ul class="navbar-nav ml-auto align-items-center">
         <!-- Navbar Search -->
-        <li class="nav-item">
+        <!-- <li class="nav-item">
           <a class="nav-link d-flex align-items-center header-link" href="#" role="button">
-            <i class='fas fa-wallet'></i>
+            <i class="fa-regular fa-wallet"></i>
             <p class="my-0 mx-3">$2,257.00</p>
           </a>
-        </li>
+        </li> -->
         <!-- Notifications Dropdown Menu -->
         <li class="nav-item dropdown">
           <a class="nav-link notification-icon" data-toggle="dropdown" href="#">
@@ -110,17 +116,17 @@
             <li class="nav-header sidenav-subheading">Microsites </li>
 
             <li class="nav-item">
-              <a href="#" class="nav-link">
+              <a href="manage-case-provider.html" class="nav-link">
                 Manage Case Providers
               </a>
             </li>
             <li class="nav-item">
-              <a href="#" class="nav-link">
+              <a href="manage-accountant.html" class="nav-link">
                 Manage Accountants
               </a>
             </li>
             <li class="nav-item">
-              <a href="#" class="nav-link">
+              <a href="manage-learners.html" class="nav-link">
                 Manage Learners
               </a>
             </li>
@@ -156,7 +162,7 @@
     </aside>
 
     <!-- Content Wrapper. Contains page content -->
-    <div class="content-wrapper page-content px-4">
+    <div class="content-wrapper page-content px-4 pb-4">
       <!-- Content Header (Page header) -->
       <div class="content-header content-title">
         <div class="container-fluid">
@@ -178,17 +184,19 @@
 
       <!-- Main content -->
       <div class="content px-0 py-4 box-shadow mx-2">
-        <div class="container-fluid">
-          <div class="row">
+        <div class="container-fluid px-0 ">
+          <div class="row px-1">
             <div class="col-md-4 col-sm-6 col-12 pl-4 pr-3">
               <div class="info-box profile-box p-4 align-items-center">
                 <span class="info-box-icon box-shadow rounded-circle"><i class="far fa-user"></i></span>
-  
+
                 <div class="info-box-content px-3">
-                  <span class="info-box-number">15</span>
-                  <span class="progress-description">
-                    Case Providers
-                  </span>
+                  <a href="manage-case-provider.html">
+                    <span class="info-box-number">15</span>
+                    <span class="progress-description">
+                      Case Providers
+                    </span>
+                  </a>
                 </div>
                 <!-- /.info-box-content -->
               </div>
@@ -198,12 +206,14 @@
             <div class="col-md-4 col-sm-6 col-12 px-3">
               <div class="info-box profile-box p-4 align-items-center">
                 <span class="info-box-icon box-shadow rounded-circle"><i class="far fa-user"></i></span>
-  
+
                 <div class="info-box-content px-3">
-                  <span class="info-box-number">08</span>
-                  <span class="progress-description">
-                  Learners
-                  </span>
+                  <a href="manage-learners.html">
+                    <span class="info-box-number">08</span>
+                    <span class="progress-description">
+                      Learners
+                    </span>
+                  </a>
                 </div>
                 <!-- /.info-box-content -->
               </div>
@@ -212,13 +222,15 @@
             <!-- /.col -->
             <div class="col-md-4 col-sm-6 col-12 pl-3 pr-4">
               <div class="info-box profile-box p-4 align-items-center">
-                <span class="info-box-icon box-shadow rounded-circle" ><i class="far fa-user"></i></span>
-  
+                <span class="info-box-icon box-shadow rounded-circle"><i class="far fa-user"></i></span>
+
                 <div class="info-box-content px-3">
-                  <span class="info-box-number">16</span>
-                  <span class="progress-description">
-                  Accountants
-                  </span>
+                  <a href="manage-accountant.html">
+                    <span class="info-box-number">16</span>
+                    <span class="progress-description">
+                      Accountants
+                    </span>
+                  </a>
                 </div>
                 <!-- /.info-box-content -->
               </div>
@@ -226,28 +238,142 @@
             </div>
             <!-- /.col -->
           </div>
-          <div class="row">
+          <div class="row px-1">
             <!-- /.col-md-6 -->
             <div class="col-lg-12 px-4 d-flex flex-column">
               <h3 class="card-title py-4">Wallet Transaction</h3>
               <div class="card">
-                  <div class="d-flex flex-row">
-                    <span class="mr-2">
-                      <i class="fas fa-square text-primary"></i> This year
-                    </span>
+                <div class="d-flex flex-row">
+                  <span class="mr-2">
+                    <i class="fas fa-square text-primary"></i> This year
+                  </span>
 
-                    <span>
-                      <i class="fas fa-square text-gray"></i> Last year
-                    </span>
-                  </div>
+                  <span>
+                    <i class="fas fa-square text-gray"></i> Last year
+                  </span>
+                </div>
                 <div class="position-relative mb-4">
                   <canvas id="sales-chart" height="250"></canvas>
                 </div>
               </div>
             </div>
 
-            <div class="col-lg-12 px-4">
-              <h3 class="card-title py-4">Recent Case Providers</h3>
+            <div class="col-lg-12 px-4 d-flex align-items-center px-0">
+              <div class="col-9  py-4 px-0">
+              <h3 class="card-title">Recent Case Providers</h3>
+              </div>
+              <div class="col-3  py-4 d-flex justify-content-between">
+                <div class="search-bar">   
+                  <span><i class="fas fa-search"></i></span>  
+                  <input type="text"  placeholder="Search">
+                </div>
+                <div class="table-filter px-3">  
+                  <i class="	fas fa-filter"></i>
+                  <i class="fas fa-chevron-down"></i>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-12 px-1">
+              <table class="table custom-table">
+                <thead>
+                  <!-- <tr>
+                    <th class="sorting sorting_desc" tabindex="0" aria-controls="example2" rowspan="1" colspan="1"
+                      aria-label="Rendering engine: activate to sort column ascending" aria-sort="descending">Rendering
+                      engine</th>
+                    <th class="sorting" tabindex="0" aria-controls="example2" rowspan="1" colspan="1"
+                      aria-label="Browser: activate to sort column ascending">Browser</th>
+                    <th class="sorting" tabindex="0" aria-controls="example2" rowspan="1" colspan="1"
+                      aria-label="Platform(s): activate to sort column ascending">Platform(s)</th>
+                    <th class="sorting" tabindex="0" aria-controls="example2" rowspan="1" colspan="1"
+                      aria-label="Engine version: activate to sort column ascending">Engine version</th>
+                    <th class="sorting" tabindex="0" aria-controls="example2" rowspan="1" colspan="1"
+                      aria-label="CSS grade: activate to sort column ascending">CSS grade</th>
+                  </tr> -->
+                  <tr>
+                    <th class="sorting sorting_desc" rowspan="1" colspan="1">Name</th>
+                    <th class="sorting sorting_desc" rowspan="1" colspan="1">Email</th>
+                    <th class="sorting sorting_desc" rowspan="1" colspan="1">Wallet Balance</th>
+                    <th class="sorting sorting_desc" rowspan="1" colspan="1">Status</th>
+                    <th class="sorting sorting_desc" rowspan="2" colspan="1"></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Jane Cooper</td>
+                    <td>jane@info.com</td>
+                    <td>$1000</td>
+                    <td>Active</td>
+                    <td><img src="/dist/img/images/Wallet.png" ><img src="/dist/img/images/Eye.png" ><img src="/dist/img/images/Edit.png" ><i class="	far fa-trash-alt"></i></td>
+                  </tr>
+                  <tr>
+                    <td >Wade Warren</td>
+                    <td>wade.warren@info.com</td>
+                    <td>$2156</td>
+                    <td>Blocked</td>
+                    <td><img src="/dist/img/images/Wallet.png" ><img src="/dist/img/images/Eye.png" ><img src="/dist/img/images/Edit.png" ><i class="	far fa-trash-alt"></i></td>
+                  </tr>
+                </tbody>
+              </table>
+              <div class="showMorebtn text-right">
+                <a href="#">Show More</a>
+              </div>
+            </div>
+            <div class="col-lg-12 px-4 d-flex align-items-center px-0">
+              <div class="col-9  py-4 px-0">
+              <h3 class="card-title">Recent Learners</h3>
+              </div>
+              <div class="col-3  py-4 d-flex justify-content-between">
+                <div class="search-bar">   
+                  <span><i class="fas fa-search"></i></span>  
+                  <input type="text"  placeholder="Search">
+                </div>
+                <div class="table-filter px-3">  
+                  <i class="	fas fa-filter"></i>
+                  <i class="fas fa-chevron-down"></i>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-12 px-1">
+              <table class="table custom-table">
+                <thead>
+                  <!-- <tr>
+                    <th class="sorting sorting_desc" tabindex="0" aria-controls="example2" rowspan="1" colspan="1"
+                      aria-label="Rendering engine: activate to sort column ascending" aria-sort="descending">Rendering
+                      engine</th>
+                    <th class="sorting" tabindex="0" aria-controls="example2" rowspan="1" colspan="1"
+                      aria-label="Browser: activate to sort column ascending">Browser</th>
+                    <th class="sorting" tabindex="0" aria-controls="example2" rowspan="1" colspan="1"
+                      aria-label="Platform(s): activate to sort column ascending">Platform(s)</th>
+                    <th class="sorting" tabindex="0" aria-controls="example2" rowspan="1" colspan="1"
+                      aria-label="Engine version: activate to sort column ascending">Engine version</th>
+                    <th class="sorting" tabindex="0" aria-controls="example2" rowspan="1" colspan="1"
+                      aria-label="CSS grade: activate to sort column ascending">CSS grade</th>
+                  </tr> -->
+                  <tr>
+                    <th class="sorting sorting_desc" rowspan="1" colspan="1">Name</th>
+                    <th class="sorting sorting_desc" rowspan="1" colspan="1">Email</th>
+                    <th class="sorting sorting_desc" rowspan="1" colspan="1">Status</th>
+                    <th class="sorting sorting_desc" rowspan="2" colspan="1"></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Jane Cooper</td>
+                    <td>jane@info.com</td>
+                    <td>Active</td>
+                    <td><img src="/dist/img/images/Wallet.png" ><img src="/dist/img/images/Eye.png" ><img src="/dist/img/images/Edit.png" ><i class="	far fa-trash-alt"></i></td>
+                  </tr>
+                  <tr>
+                    <td >Wade Warren</td>
+                    <td>wade.warren@info.com</td>
+                    <td>Blocked</td>
+                    <td><img src="/dist/img/images/Wallet.png" ><img src="/dist/img/images/Eye.png" ><img src="/dist/img/images/Edit.png" ><i class="	far fa-trash-alt"></i></td>
+                  </tr>
+                </tbody>
+              </table>
+              <div class="showMorebtn text-right">
+                <a href="#">Show More</a>
+              </div>
             </div>
           </div>
           <!-- /.col-md-6 -->
@@ -260,11 +386,6 @@
   </div>
   <!-- /.content-wrapper -->
 
-  <!-- Control Sidebar -->
-  <aside class="control-sidebar control-sidebar-dark">
-    <!-- Control sidebar content goes here -->
-  </aside>
-  <!-- /.control-sidebar -->
   </div>
   <!-- ./wrapper -->
 
@@ -283,6 +404,33 @@
   <script src="dist/js/demo.js"></script>
   <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
   <script src="dist/js/pages/dashboard3.js"></script>
+  <!-- DataTables -->
+  <script src="plugins/datatables-bs4/js/dataTables.bootstrap4.min.js"></script>
+  <script src="plugins/datatables/jquery.dataTables.min.js"></script>
+  <script src="plugins/datatables-responsive/js/dataTables.responsive.min.js"></script>
+  <script src="plugins/datatables-responsive/js/responsive.bootstrap4.min.js"></script>
+  <script src="plugins/datatables-buttons/js/dataTables.buttons.min.js"></script>
+  <script src="plugins/datatables-buttons/js/buttons.bootstrap4.min.js"></script>
+  <script src="plugins/datatables-buttons/js/buttons.html5.min.js"></script>
+  <script src="plugins/datatables-buttons/js/buttons.print.min.js"></script>
+  <script src="plugins/datatables-buttons/js/buttons.colVis.min.js"></script>
 </body>
+<script>
+  $(function () {
+    $("#example1").DataTable({
+      "responsive": true, "lengthChange": false, "autoWidth": false,
+      "buttons": ["copy", "csv", "excel", "pdf", "print", "colvis"]
+    }).buttons().container().appendTo('#example1_wrapper .col-md-6:eq(0)');
+    $('#example2').DataTable({
+      "paging": true,
+      "lengthChange": false,
+      "searching": false,
+      "ordering": true,
+      "info": true,
+      "autoWidth": false,
+      "responsive": true,
+    });
+  });
+</script>
 
 </html>
